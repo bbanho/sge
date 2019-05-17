@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkAssistant" id="addassist">
+    <property name="can_focus">False</property>
+    <property name="type">popup</property>
+    <property name="modal">True</property>
+    <property name="window_position">center-on-parent</property>
+    <property name="destroy_with_parent">True</property>
+    <property name="skip_taskbar_hint">True</property>
+    <property name="has_resize_grip">True</property>
+    <property name="use_header_bar">1</property>
+    <child>
+      <object class="GtkLabel">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes">Página de introdução</property>
+      </object>
+      <packing>
+        <property name="page_type">intro</property>
+        <property name="has_padding">False</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkLabel">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes">Página de conteúdo</property>
+      </object>
+      <packing>
+        <property name="has_padding">False</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkLabel">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes">Página de confirmação</property>
+      </object>
+      <packing>
+        <property name="page_type">confirm</property>
+        <property name="has_padding">False</property>
+      </packing>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <placeholder/>
+    </child>
+  </object>
+  <object class="GtkListStore" id="liststore1">
+    <columns>
+      <!-- column-name CPF -->
+      <column type="guint"/>
+      <!-- column-name Nome -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0">0</col>
+        <col id="1" translatable="yes"/>
+      </row>
+      <row>
+        <col id="0">0</col>
+        <col id="1" translatable="yes"/>
+      </row>
+      <row>
+        <col id="0">0</col>
+        <col id="1" translatable="yes"/>
+      </row>
+      <row>
+        <col id="0">0</col>
+        <col id="1" translatable="yes"/>
+      </row>
+      <row>
+        <col id="0">0</col>
+        <col id="1" translatable="yes"/>
+      </row>
+      <row>
+        <col id="0">0</col>
+        <col id="1" translatable="yes"/>
+      </row>
+      <row>
+        <col id="0">0</col>
+        <col id="1" translatable="yes"/>
+      </row>
+      <row>
+        <col id="0">0</col>
+        <col id="1" translatable="yes"/>
+      </row>
+      <row>
+        <col id="0">0</col>
+        <col id="1" translatable="yes"/>
+      </row>
+      <row>
+        <col id="0">0</col>
+        <col id="1" translatable="yes"/>
+      </row>
+      <row>
+        <col id="0">0</col>
+        <col id="1" translatable="yes"/>
+      </row>
+      <row>
+        <col id="0">0</col>
+        <col id="1" translatable="yes"/>
+      </row>
+    </data>
+  </object>
+  <object class="GtkApplicationWindow" id="window_main">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">SGE</property>
+    <property name="default_width">640</property>
+    <property name="default_height">480</property>
+    <property name="has_resize_grip">True</property>
+    <signal name="destroy" handler="on_window_main_destroy" swapped="no"/>
+    <child type="titlebar">
+      <object class="GtkToolbar" id="main_menu">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="toolbar_style">both</property>
+        <child>
+          <object class="GtkMenuToolButton" id="menubar_add">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="action_name">app.quit</property>
+            <property name="label" translatable="yes">Adicionar</property>
+            <property name="use_underline">True</property>
+            <property name="stock_id">gtk-add</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="homogeneous">True</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkTreeView">
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="model">liststore1</property>
+        <property name="enable_grid_lines">both</property>
+        <child internal-child="selection">
+          <object class="GtkTreeSelection"/>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
